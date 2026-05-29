@@ -3,32 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Contact Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.Css">
 </head>
 <body>
     <header>
        <center><font color="red"><h1>Contact Us</h1></font> </center>
-       <nav align="right">
+    <nav align="center">
+           <nav align="center" id="nav">
            <ul>
-               <a href="index.html">Home</a> |
-               <a href="about.html">About</a> |
-               <a href="contact.html">Contact</a>
+               <a href="index.html" target="_blank">Home</a> |
+               <a href="about.html" target="_blank">About</a> |
+               <a href="contact.html" target="_blank">Contact</a> |
+               <a href="DoctorRegister.html" target="_blank">Doc Register</a> |
+               <a href="DoctorLogin.html" target="_blank">Doc Login</a> |
+               <a href="PatientRegister.html" target="_blank">Patient Register</a> |
+               <a href="PatientLogin.html" target="_blank">Patient Login</a>
+            
            </ul>
+                </nav>
     </header>
     <hr>
     <main>
         <div>
             <center><h2>Contact Us</h2></center>
-            <p>If you have any questions or would like to get in touch with us, please fill out the form below or email us at contact@mywebsite.com.</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message"></textarea><br><br>
-                <input type="submit" value="Submit">
+            <p class="container">If you have any questions or would like to get in touch with us, please fill out the form below or email us at contact@mywebsite.com.</p>
+            <form class="horizontal form">
+                <table class="table">
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" required class="input-group"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required class="input-group"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="message">Message:</label></td>
+                        <td >
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" name="message" placeholder="Leave a comment here" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button type="button" class="btn btn-success">Submit</button>
             </form>
         </div>
     </main>
