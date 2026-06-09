@@ -3,99 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>About Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="index.Css">
 </head>
 <body>
-    <header>
-       <center><font color="red"><h1>About Us</h1></font> </center>
-       
-        <nav align="center">
-           <nav align="center" id="nav">
-           <ul>
-               <a href="index.html" target="_blank">Home</a> |
-               <a href="about.html" target="_blank">About</a> |
-               <a href="contact.html" target="_blank">Contact</a> |
-               <a href="DoctorRegister.html" target="_blank">Doc Register</a> |
-               <a href="DoctorLogin.html" target="_blank">Doc Login</a> |
-               <a href="PatientRegister.html" target="_blank">Patient Register</a> |
-               <a href="PatientLogin.html" target="_blank">Patient Login</a>
-            
-           </ul>
-            
-           
+    <header class="site-header">
+        <h1 class="site-title">About Us</h1>
+        <nav class="main-nav" id="nav" aria-label="Main navigation">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="DoctorRegister.html" target="_blank">Doc Register</a>
+            <a href="DoctorLogin.html" target="_blank">Doc Login</a>
+            <a href="PatientRegister.html" target="_blank">Patient Register</a>
+            <a href="PatientLogin.html" target="_blank">Patient Login</a>
+        </nav>
     </header>
-    <hr>
-    <main>
-        <div>
-            <center><h2>About Us</h2></center>
-            <br>
-          
-            <img class="img-thumbnail" src="doc1.png" alt="" title="doctor1" width="300px" height="200px">
-             <img class="img-thumbnail" src="doc2.png" alt="" title="doctor2" width="300px" height="200px">
-              <img class="img-thumbnail" src="doc3.png" alt="" title="doctor3" width="300px" height="200px">
-               <img class="img-thumbnail" src="doc4.png" alt="" title="doctor4" width="300px" height="200px">
-               
-               <br>
-               <br>
-               <center> <img class="img-thumbnail" src="doc5.jpg" alt="" title="doctor5" width="300px" height="200px"> </center>
-               <br>
-               <br>
-               <table class="table">
-                <thead>
-                   <tr>
-                       <th>Name</th>
-                       <th>Specialization</th>
-                       <th>Experience</th>
-                       <th>Doctor</th>
-                       <th>Know More</th>
-                   </tr>
-                     </thead>
-                   <tbody>
-                   <tr>
-                       <td>Dr. Smith</td>
-                       <td>Cardiology</td>
-                       <td>10 years</td>
-                       <td><img class="img-thumbnail" src="doc1.png" alt="" title="doctor1" width="100px" height="70px"></td>
-                       <td><a href="dr-smith.html" target="_blank">Dr. Smith</a></td>
-                   </tr>
-                   <tr>
-                       <td>Dr. Johnson</td>
-                       <td>Neurology</td>
-                       <td>8 years</td>
-                       <td><img src="doc2.png" alt="" title="doctor2" width="100px" height="70px"></td>
-                       <td><a href="dr-johnson.html" target="_blank">Dr. Johnson</a></td>
-                   </tr>
-                   <tr>
-                       <td>Dr. Lee</td>
-                       <td>Pediatrics</td>
-                       <td>5 years</td>
-                       <td><img src="doc3.png" alt="" title="doctor3" width="100px" height="70px"></td>
-                       <td><a href="dr-lee.html" target="_blank">Dr. Lee</a></td>
-                   </tr>
-                   <tr>
-                       <td>Dr. Brown</td>
-                       <td>Orthopedics</td>
-                       <td>12 years</td>
-                       <td><img src="doc4.png" alt="" title="doctor4" width="100px" height="70px"></td>
-                       <td><a href="dr-brown.html" target="_blank">Dr. Brown</a></td>
-                   </tr>
-                   <tr>
-                       <td>Dr. Davis</td>
-                       <td>Dermatology</td>
-                       <td>7 years</td>
-                       <td><img src="doc5.jpg" alt="" title="doctor5" width="100px" height="70px"></td>
-                       <td><a href="dr-davis.html" target="_blank">Dr. Davis</a></td>
-                   </tr>
-                </tbody>
-               </table>
-        </div>
-    </main>
-    <hr>
-    <footer>
-      <center><font color="blue"><h2>Thank you for visiting!</h2></font></center>
-    </footer>
 
+    <main class="page">
+        <section class="panel">
+            <h2>Our Doctors</h2>
+            <div class="doctor-gallery" aria-label="Doctor images">
+                <img class="img-thumbnail" src="doc1.png" alt="Doctor Smith" title="doctor1">
+                <img class="img-thumbnail" src="doc2.png" alt="Doctor Johnson" title="doctor2">
+                <img class="img-thumbnail" src="doc3.png" alt="Doctor Lee" title="doctor3">
+                <img class="img-thumbnail" src="doc4.png" alt="Doctor Brown" title="doctor4">
+                <img class="img-thumbnail" src="doc5.jpg" alt="Doctor Davis" title="doctor5">
+            </div>
+
+            <div class="table-wrap">
+                <table class="table doctor-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Specialization</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Doctor</th>
+                            <th scope="col">Know More</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dr. Smith</td>
+                            <td>Cardiology</td>
+                            <td>10 years</td>
+                            <td><img src="doc1.png" alt="Dr. Smith"></td>
+                            <td><a href="dr-smith.html" target="_blank">Dr. Smith</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Johnson</td>
+                            <td>Neurology</td>
+                            <td>8 years</td>
+                            <td><img src="doc2.png" alt="Dr. Johnson"></td>
+                            <td><a href="dr-johnson.html" target="_blank">Dr. Johnson</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Lee</td>
+                            <td>Pediatrics</td>
+                            <td>5 years</td>
+                            <td><img src="doc3.png" alt="Dr. Lee"></td>
+                            <td><a href="dr-lee.html" target="_blank">Dr. Lee</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Brown</td>
+                            <td>Orthopedics</td>
+                            <td>12 years</td>
+                            <td><img src="doc4.png" alt="Dr. Brown"></td>
+                            <td><a href="dr-brown.html" target="_blank">Dr. Brown</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Davis</td>
+                            <td>Dermatology</td>
+                            <td>7 years</td>
+                            <td><img src="doc5.jpg" alt="Dr. Davis"></td>
+                            <td><a href="dr-davis.html" target="_blank">Dr. Davis</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <h2>Thank you for visiting!</h2>
+    </footer>
+    <script src="validation.js"></script>
 </body>
 </html>
