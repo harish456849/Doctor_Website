@@ -3,165 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Contact Page</title>
     <title>Patient Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="index.Css">
 </head>
 <body>
-    <header>
-       <center><font color="red"><h1>Patient Registration</h1></font> </center>
-       
-        <nav align="center" id="nav">
-           
-           <ul>
-               <a href="index.html" target="_blank">Home</a> |
-               <a href="about.html" target="_blank">About</a> |
-               <a href="contact.html" target="_blank">Contact</a> |
-               <a href="DoctorRegister.html" target="_blank">Doc Register</a> |
-               <a href="DoctorLogin.html" target="_blank">Doc Login</a> |
-               <a href="PatientRegister.html" target="_blank">Patient Register</a> |
-               <a href="PatientLogin.html" target="_blank">Patient Login</a>
-            
-           </ul>
-              </nav>
-           
+    <header class="site-header">
+        <h1 class="site-title">Patient Registration</h1>
+        <nav class="main-nav" id="nav" aria-label="Main navigation">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="DoctorRegister.html" target="_blank">Doc Register</a>
+            <a href="DoctorLogin.html" target="_blank">Doc Login</a>
+            <a href="PatientRegister.html" target="_blank">Patient Register</a>
+            <a href="PatientLogin.html" target="_blank">Patient Login</a>
+        </nav>
     </header>
-    <hr>
-    <main>
-        <div>
-            <form action="patient-register" method="post"  class="horizontal form" enctype="multipart/form-data">
-                <table align="center">
-                
-                    <caption><h2>Patient Registration</h2></caption>
-                   
-                  
-                
 
-    <tr>
-        <td>
-        <lable for="name">Name</lable>
-        </td>
-        <td>
-            <input type="text" name="name" id="name" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="password">Password</lable>
-        </td>
-        <td>
-            <input type="password" name="password" id="password" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="email">Email</lable>
-        </td>
-        <td>
-            <input type="email" name="email" id="email" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="phone">Phone Number</lable>
-        </td>
-        <td>
-            <input type="tel" name="phone" id="phone" class="input-group">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="dob">Date of Birth</lable>
-        </td>
-        <td>
-            <input type="date" name="dob" id="dob" class="input-group">
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <lable for="appointment">Appointment Date and Time</lable>
-        </td>
-        <td>
-            <input type="datetime-local" name="appointment" id="appointment" class="input-group">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="gender">Gender</lable>
-        </td>
-        <td>
-            <input type="radio" name="gender" value="male" id="male" class="input-group">
-            <lable for="male">Male</lable>
-            <input type="radio" name="gender" value="female" id="female" class="input-group">
-            <lable for="female">Female</lable>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="disease">Disease</lable>
-        </td>
-        <td>
-            <input type="checkbox" name="disease" value="diabetes" id="diabetes" class="input-group">
-            <lable for="diabetes">Diabetes</lable>
-            <input type="checkbox" name="disease" value="hypertension" id="hypertension" class="input-group">
-            <lable for="hypertension">Hypertension</lable>
-            <input type="checkbox" name="disease" value="asthma" id="asthma" class="input-group">
-            <lable for="asthma">Asthma</lable>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="blood_group">Blood Group</lable>
-        </td>
-        <td>
-            <select name="blood_group" id="blood_group">
-                <option value="a+">A+</option>
-                <option value="a-">A-</option>
-                <option value="b+">B+</option>
-                <option value="b-">B-</option>
-                <option value="ab+">AB+</option>
-                <option value="ab-">AB-</option>
-                <option value="o+">O+</option>
-                <option value="o-">O-</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="address">Address</lable>
-        </td>
-        <td>
-            <textarea name="address" id="address" rows="5" cols="10"></textarea>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="certificate">Upload Certificate</lable>
-        </td>
-        <td>
-            <input type="file" name="certificate" id="certificate">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="submit" value="Register" class="btn btn-success">Register</button>
-        </td>
-    
-        <td>
-            <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
-        </td>
-    </tr>
-</table>
-</form>
-
-        </div>
+    <main class="page">
+        <section class="panel form-card">
+            <h2>Patient Registration</h2>
+            <form action="patient-register" method="post" class="form-grid" enctype="multipart/form-data" data-validate="patient-register">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required autocomplete="name">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required minlength="6" autocomplete="new-password">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required autocomplete="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" maxlength="10" autocomplete="tel">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="appointment">Appointment Date and Time</label>
+                    <input type="datetime-local" name="appointment" id="appointment">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <span class="field-label">Gender</span>
+                    <div class="choice-group">
+                        <label for="male"><input type="radio" name="gender" value="male" id="male" required> Male</label>
+                        <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <span class="field-label">Disease</span>
+                    <div class="choice-group">
+                        <label for="diabetes"><input type="checkbox" name="disease" value="diabetes" id="diabetes"> Diabetes</label>
+                        <label for="hypertension"><input type="checkbox" name="disease" value="hypertension" id="hypertension"> Hypertension</label>
+                        <label for="asthma"><input type="checkbox" name="disease" value="asthma" id="asthma"> Asthma</label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="blood_group">Blood Group</label>
+                    <select name="blood_group" id="blood_group">
+                        <option value="">Select blood group</option>
+                        <option value="a+">A+</option>
+                        <option value="a-">A-</option>
+                        <option value="b+">B+</option>
+                        <option value="b-">B-</option>
+                        <option value="ab+">AB+</option>
+                        <option value="ab-">AB-</option>
+                        <option value="o+">O+</option>
+                        <option value="o-">O-</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="address">Address</label>
+                    <textarea name="address" id="address" rows="5"></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="certificate">Upload Certificate</label>
+                    <input type="file" name="certificate" id="certificate">
+                    <span class="error-message"></span>
+                </div>
+                <div class="actions">
+                    <button type="submit" value="Register" class="btn btn-success">Register</button>
+                    <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </section>
     </main>
-    <hr>
-    <footer>
-        <center><font color="blue"><h2>Thank you for registering!</h2></font></center>
-    </footer>
 
+    <footer class="site-footer">
+        <h2>Thank you for registering!</h2>
+    </footer>
+    <script src="validation.js"></script>
 </body>
 </html>

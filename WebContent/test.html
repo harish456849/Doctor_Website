@@ -3,53 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Test Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Contact Page</title>
+    <link rel="stylesheet" href="index.Css">
 </head>
 <body>
-<div id="id1">
-    <h2>Simple Interest</h2>
-</div>
-<div id="id2">
-    <input type="number" id="principal" placeholder="Principal Amount">
-    <input type="number" id="rate" placeholder="Rate of Interest">
-    <input type="number" id="time" placeholder="Time (years)">
-</div>
-<div id="id3">
-    <button id="calculate">Calculate Simple Interest</button>
-</div>
-<br><br><br><br><br><br>
-<div id="id4">
-    <h2>Square and Cube of a Number</h2>
-</div>
-<div id="id5">
-    <input type="number" id="number" placeholder="Enter a number">
-</div>
-<div id="id6">
-    <button id="calculateSquareCube">Calculate Square and Cube</button>
-</div>
+    <header class="site-header">
+        <h1 class="site-title">Calculation Test Page</h1>
+        <nav class="main-nav" id="nav" aria-label="Main navigation">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="DoctorRegister.html" target="_blank">Doc Register</a>
+            <a href="DoctorLogin.html" target="_blank">Doc Login</a>
+            <a href="PatientRegister.html" target="_blank">Patient Register</a>
+            <a href="PatientLogin.html" target="_blank">Patient Login</a>
+        </nav>
+    </header>
 
-<script>
-    document.getElementById('id1').style.color = 'blue';
-    document.getElementById('id2').style.backgroundColor = 'lightgray';
-    document.getElementById('id3').style.backgroundColor = 'lightgray';
-    document.getElementById('calculate').addEventListener('click', function(){
-        let principal = parseFloat(document.getElementById('principal').value);
-        let rate = parseFloat(document.getElementById('rate').value);
-        let time = parseFloat(document.getElementById('time').value);
-        let simpleInterest = (principal * rate * time) / 100;
-        alert('Simple Interest: ' + simpleInterest);
-    })
+    <main class="page">
+        <section class="panel tool-grid">
+            <article class="form-grid">
+                <h2>Simple Interest</h2>
+                <div class="form-row">
+                    <label for="principal">Principal Amount</label>
+                    <input type="number" id="principal" placeholder="Principal Amount" min="1">
+                </div>
+                <div class="form-row">
+                    <label for="rate">Rate of Interest</label>
+                    <input type="number" id="rate" placeholder="Rate of Interest" min="1">
+                </div>
+                <div class="form-row">
+                    <label for="time">Time in Years</label>
+                    <input type="number" id="time" placeholder="Time in years" min="1">
+                </div>
+                <button type="button" id="calculate" class="btn btn-success">Calculate Simple Interest</button>
+                <p id="simpleInterestResult" class="result-box" aria-live="polite"></p>
+            </article>
 
-    document.getElementById('id4').style.color = 'green';
-    document.getElementById('id5').style.backgroundColor = 'lightyellow';
-    document.getElementById('id6').style.backgroundColor = 'lightyellow';
-    document.getElementById('calculateSquareCube').addEventListener('click', function(){
-        let number = parseFloat(document.getElementById('number').value);
-        let square = number * number;
-        let cube = number * number * number;
-        alert('Square: ' + square + '\nCube: ' + cube);
-    })
- </script>   
+            <article class="form-grid">
+                <h2>Square and Cube of a Number</h2>
+                <div class="form-row">
+                    <label for="number">Number</label>
+                    <input type="number" id="number" placeholder="Enter a number">
+                </div>
+                <button type="button" id="calculateSquareCube" class="btn btn-success">Calculate Square and Cube</button>
+                <p id="squareCubeResult" class="result-box" aria-live="polite"></p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <h2>Thank you for visiting!</h2>
+    </footer>
+    <script src="validation.js"></script>
 </body>
 </html>

@@ -3,163 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Contact Page</title>
     <title>Doctor Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="index.Css">
 </head>
 <body>
-    <header>
-       <center><font color="red"><h1>Doctor Registration</h1></font> </center>
-       
-        <nav align="center" id="nav">
-           
-           <ul>
-               <a href="index.html" target="_blank">Home</a> |
-               <a href="about.html" target="_blank">About</a> |
-               <a href="contact.html" target="_blank">Contact</a> |
-               <a href="DoctorRegister.html" target="_blank">Doc Register</a> |
-               <a href="DoctorLogin.html" target="_blank">Doc Login</a> |
-               <a href="PatientRegister.html" target="_blank">Patient Register</a> |
-               <a href="PatientLogin.html" target="_blank">Patient Login</a>
-            
-           </ul>
-           </nav>
-           
+    <header class="site-header">
+        <h1 class="site-title">Doctor Registration</h1>
+        <nav class="main-nav" id="nav" aria-label="Main navigation">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="about.html" target="_blank">About</a>
+            <a href="contact.html" target="_blank">Contact</a>
+            <a href="DoctorRegister.html" target="_blank">Doc Register</a>
+            <a href="DoctorLogin.html" target="_blank">Doc Login</a>
+            <a href="PatientRegister.html" target="_blank">Patient Register</a>
+            <a href="PatientLogin.html" target="_blank">Patient Login</a>
+        </nav>
     </header>
-    <hr>
-    <main>
-        <div>
-            <form action="doctor-register" method="post" name="doctorRegistrationForm" enctype="multipart/form-data">
-                <table align="center">
-                <caption><h2>Doctor Registration</h2></caption>
-                
 
-    <tr>
-        <td>
-        <lable for="nm">Name</lable>
-        </td>
-        <td>
-            <input type="text" name="name" id="nm" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="pwd">Password</lable>
-        </td>
-        <td>
-            <input type="password" name="password" id="pwd" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="eml">Email</lable>
-        </td>
-        <td>
-            <input type="email" name="email" id="eml" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="phn">Phone Number</lable>
-        </td>
-        <td>
-            <input type="tel" name="phone" id="phn" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="spec">Specialization</lable>
-        </td>
-        <td>
-            <select name="specialization" id="spec" class="input-group" required>
-                <option value="cardiology">Cardiology</option>
-                <option value="dermatology">Dermatology</option>
-                <option value="neurology">Neurology</option>
-                <option value="pediatrics">Pediatrics</option>
-                <option value="psychiatry">Psychiatry</option>
-                <option value="radiology">Radiology</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="exp">Years of Experience</lable>
-        </td>
-        <td>
-            <input type="number" name="experience" min="0" max="50" id="exp" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="male">Gender</lable>
-        </td>
-        <td>
-            <input type="radio" name="gender" value="male" id="male" class="input-group">
-            <lable for="male">Male</lable>
-            <input type="radio" name="gender" value="female" id="female" class="input-group">
-            <lable for="female">Female</lable>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="days">Available Days</lable>
-        </td>
-        <td>
-            <input type="checkbox" name="days" value="monday" id="mon" class="input-group">
-            <lable for="monday">Monday</lable>
-            <input type="checkbox" name="days" value="tuesday" id="tue" class="input-group">
-            <lable for="tuesday">Tuesday</lable>
-            <input type="checkbox" name="days" value="wednesday" id="wed" class="input-group">
-            <lable for="wednesday">Wednesday</lable>
-            <input type="checkbox" name="days" value="thursday" id="thu" class="input-group">
-            <lable for="thursday">Thursday</lable>
-            <input type="checkbox" name="days" value="friday" id="fri" class="input-group">
-            <lable for="friday">Friday</lable>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="time">Available Time</lable>
-        </td>
-        <td>
-            <input type="time" name="time" id="time" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="addr">Address</lable>
-        </td>
-        <td>
-            <textarea name="address" rows="5" cols="10" id="addr" class="input-group" required></textarea>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <lable for="cert">Upload Certificate</lable>
-        </td>
-        <td>
-            <input type="file" name="certificate" id="cert" class="input-group" required>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="submit" value="Register" id="reg" class="btn btn-success" required>Register</button>
-        </td>
-    
-        <td>
-            <button type="reset" value="Reset" id="res" class="btn btn-danger" required>Reset</button>
-        </td>
-    </tr>
-</table>
-</form>
-
-        </div>
+    <main class="page">
+        <section class="panel form-card">
+            <h2>Doctor Registration</h2>
+            <form action="doctor-register" method="post" name="doctorRegistrationForm" enctype="multipart/form-data" class="form-grid" data-validate="doctor-register">
+                <div class="form-row">
+                    <label for="nm">Name</label>
+                    <input type="text" name="name" id="nm" required autocomplete="name">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="pwd">Password</label>
+                    <input type="password" name="password" id="pwd" required minlength="6" autocomplete="new-password">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="eml">Email</label>
+                    <input type="email" name="email" id="eml" required autocomplete="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="phn">Phone Number</label>
+                    <input type="tel" name="phone" id="phn" required pattern="[0-9]{10}" maxlength="10" autocomplete="tel">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="spec">Specialization</label>
+                    <select name="specialization" id="spec" required>
+                        <option value="">Select specialization</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="psychiatry">Psychiatry</option>
+                        <option value="radiology">Radiology</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="exp">Years of Experience</label>
+                    <input type="number" name="experience" min="0" max="50" id="exp" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <span class="field-label">Gender</span>
+                    <div class="choice-group">
+                        <label for="male"><input type="radio" name="gender" value="male" id="male" required> Male</label>
+                        <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <span class="field-label">Available Days</span>
+                    <div class="choice-group">
+                        <label for="mon"><input type="checkbox" name="days" value="monday" id="mon"> Monday</label>
+                        <label for="tue"><input type="checkbox" name="days" value="tuesday" id="tue"> Tuesday</label>
+                        <label for="wed"><input type="checkbox" name="days" value="wednesday" id="wed"> Wednesday</label>
+                        <label for="thu"><input type="checkbox" name="days" value="thursday" id="thu"> Thursday</label>
+                        <label for="fri"><input type="checkbox" name="days" value="friday" id="fri"> Friday</label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="time">Available Time</label>
+                    <input type="time" name="time" id="time" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="addr">Address</label>
+                    <textarea name="address" rows="5" id="addr" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-row">
+                    <label for="cert">Upload Certificate</label>
+                    <input type="file" name="certificate" id="cert" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="actions">
+                    <button type="submit" value="Register" id="reg" class="btn btn-success">Register</button>
+                    <button type="reset" value="Reset" id="res" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </section>
     </main>
-    <hr>
-    <footer>
-        <center><font color="blue"><h2>Thank you for registering!</h2></font></center>
-    </footer>
 
+    <footer class="site-footer">
+        <h2>Thank you for registering!</h2>
+    </footer>
+    <script src="validation.js"></script>
 </body>
 </html>
