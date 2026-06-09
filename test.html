@@ -7,6 +7,49 @@
     <title>Contact Page</title>
 </head>
 <body>
-<button type="button" class="btn btn-success">Success</button>
+<div id="id1">
+    <h2>Simple Interest</h2>
+</div>
+<div id="id2">
+    <input type="number" id="principal" placeholder="Principal Amount">
+    <input type="number" id="rate" placeholder="Rate of Interest">
+    <input type="number" id="time" placeholder="Time (years)">
+</div>
+<div id="id3">
+    <button id="calculate">Calculate Simple Interest</button>
+</div>
+<br><br><br><br><br><br>
+<div id="id4">
+    <h2>Square and Cube of a Number</h2>
+</div>
+<div id="id5">
+    <input type="number" id="number" placeholder="Enter a number">
+</div>
+<div id="id6">
+    <button id="calculateSquareCube">Calculate Square and Cube</button>
+</div>
+
+<script>
+    document.getElementById('id1').style.color = 'blue';
+    document.getElementById('id2').style.backgroundColor = 'lightgray';
+    document.getElementById('id3').style.backgroundColor = 'lightgray';
+    document.getElementById('calculate').addEventListener('click', function(){
+        let principal = parseFloat(document.getElementById('principal').value);
+        let rate = parseFloat(document.getElementById('rate').value);
+        let time = parseFloat(document.getElementById('time').value);
+        let simpleInterest = (principal * rate * time) / 100;
+        alert('Simple Interest: ' + simpleInterest);
+    })
+
+    document.getElementById('id4').style.color = 'green';
+    document.getElementById('id5').style.backgroundColor = 'lightyellow';
+    document.getElementById('id6').style.backgroundColor = 'lightyellow';
+    document.getElementById('calculateSquareCube').addEventListener('click', function(){
+        let number = parseFloat(document.getElementById('number').value);
+        let square = number * number;
+        let cube = number * number * number;
+        alert('Square: ' + square + '\nCube: ' + cube);
+    })
+ </script>   
 </body>
 </html>
